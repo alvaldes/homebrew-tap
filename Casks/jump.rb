@@ -1,6 +1,6 @@
 cask "jump" do
-  version "1.1.0"
-  sha256 "a12326afac643d805f1644c93951755dda03de1fe4b1439dea76ffec43aa2fd5"
+  version "1.2.0"
+  sha256 "ea64e3de402d641f88d6a342cd556a1bb20ec00466bea52e0fce82c400a01af7"
 
   url "https://github.com/alvaldes/jump/releases/download/v#{version}/JUMP.dmg"
   name "JUMP"
