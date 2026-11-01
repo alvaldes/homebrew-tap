@@ -1,6 +1,6 @@
 cask "netty" do
-  version "1.0.0"
-  sha256 "9b1f6de22d873df886aef2736f5f0a1663e114160bb50b85e436af2a0a7db43c"
+  version "1.1.0"
+  sha256 "fe7d24d5ecd47c5a335fa1da95645bb1df9b09117d444d9b8cbbcb48b47adf60"
 
   url "https://github.com/alvaldes/netty/releases/download/v#{version}/Netty.dmg"
   name "Netty"
