@@ -3,7 +3,6 @@
 class Velo < Formula
   desc "Terminal music player in one binary: gapless, radio, no daemon"
   homepage "https://alvaldes.github.io/velo/"
-  version "0.50.0"
   license "MIT"
 
   on_macos do

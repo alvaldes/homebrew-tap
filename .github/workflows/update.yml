@@ -37,7 +37,10 @@ jobs:
             echo "The formula is already current."
             exit 0
           fi
-          version=$(sed -n 's/^  version "\(.*\)"$/\1/p' Formula/velo.rb)
+          # The formula carries no `version` line: Homebrew reads it from the
+          # release URL, so take the tag from there for the commit subject.
+          version=$(sed -n 's|^ *url ".*/download/v\([^/]*\)/.*|\1|p' Formula/velo.rb | head -1)
+          test -n "$version" || { echo "could not read the version from the formula" >&2; exit 1; }
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add Formula/velo.rb

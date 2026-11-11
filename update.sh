@@ -29,7 +29,6 @@ case "$tag" in
   v[0-9]*) ;;
   *) fail "'$tag' is not a release tag" ;;
 esac
-version=${tag#v}
 
 # The checksum of each archive, as CI published it beside the archive. A
 # release still being built is missing some: stop without touching anything.
@@ -60,7 +59,6 @@ cat >Formula/velo.rb.new <<FORMULA
 class Velo < Formula
   desc "Terminal music player in one binary: gapless, radio, no daemon"
   homepage "https://alvaldes.github.io/velo/"
-  version "$version"
   license "MIT"
 
   on_macos do
