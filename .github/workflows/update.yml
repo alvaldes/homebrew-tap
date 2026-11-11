@@ -1,0 +1,45 @@
+name: Update the formula
+
+# The tap keeps itself current: every ten minutes it asks which velo release is the
+# latest, and rewrites the formula when that release has all its archives.
+# It needs no secret, because the only repository it writes to is this one.
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag to point the formula at (default: the latest release)"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-formula
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Write the formula
+        env:
+          TAG: ${{ github.event.inputs.tag }}
+        run: ./update.sh $TAG
+
+      - name: Commit it when it changed
+        run: |
+          if git diff --quiet -- Formula/velo.rb && [ -z "$(git status --porcelain Formula)" ]; then
+            echo "The formula is already current."
+            exit 0
+          fi
+          version=$(sed -n 's/^  version "\(.*\)"$/\1/p' Formula/velo.rb)
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Formula/velo.rb
+          git commit -m "velo $version"
+          git push
