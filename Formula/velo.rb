@@ -1,4 +1,4 @@
-# Written by update.sh from the checksums of the v0.50.0 release. Do not edit
+# Written by update.sh from the checksums of the v0.51.0 release. Do not edit
 # by hand: the next release overwrites it.
 class Velo < Formula
   desc "Terminal music player in one binary: gapless, radio, no daemon"
@@ -7,23 +7,23 @@ class Velo < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/alvaldes/velo/releases/download/v0.50.0/velo-v0.50.0-aarch64-apple-darwin.tar.gz"
-      sha256 "2305760e3971192b3c980d43aa3301502cd35da22cd8fc14d0f0e552c0ceab40"
+      url "https://github.com/alvaldes/velo/releases/download/v0.51.0/velo-v0.51.0-aarch64-apple-darwin.tar.gz"
+      sha256 "55b5575d8e7e9219bc8c6ed49db26c084777af311c0fab63c5ca713b8e290093"
     end
     on_intel do
-      url "https://github.com/alvaldes/velo/releases/download/v0.50.0/velo-v0.50.0-x86_64-apple-darwin.tar.gz"
-      sha256 "13afffdbfbf20dfbff275bfa9a3a3e9e1cc078e6f127809961bbfdb5b817e3e8"
+      url "https://github.com/alvaldes/velo/releases/download/v0.51.0/velo-v0.51.0-x86_64-apple-darwin.tar.gz"
+      sha256 "dbf94d5b1ae0d668609d0031d86f2becdbf5c33b128d241d712b86b3da4a0ce3"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/alvaldes/velo/releases/download/v0.50.0/velo-v0.50.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "46dfca532fa2e3a862bb85225ae42c11d731bac0c21a0b57ed890d270c6856d3"
+      url "https://github.com/alvaldes/velo/releases/download/v0.51.0/velo-v0.51.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "c1b48fb1f92bdbd95d030a0140712a8673ff948e77cb6fa8b71a7be79961ea9f"
     end
     on_intel do
-      url "https://github.com/alvaldes/velo/releases/download/v0.50.0/velo-v0.50.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "49e72f3fa67c8d094164f8684385463eb7f1c3dd5ea46653759d2abd1c936619"
+      url "https://github.com/alvaldes/velo/releases/download/v0.51.0/velo-v0.51.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "699f110e08bdcb7b33dfdd7a02b0ab58cf05a7ba0316697cc0760127fff2006d"
     end
   end
 
