@@ -1,4 +1,4 @@
-# Written by update.sh from the checksums of the v1.0.0 release. Do not edit
+# Written by update.sh from the checksums of the v1.1.0 release. Do not edit
 # by hand: the next release overwrites it.
 class Velo < Formula
   desc "Terminal music player in one binary: gapless, radio, no daemon"
@@ -7,23 +7,23 @@ class Velo < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/alvaldes/velo/releases/download/v1.0.0/velo-v1.0.0-aarch64-apple-darwin.tar.gz"
-      sha256 "89db16eda3ed45ad4d39d1e20b890f95a2a4ebb1a7ab88b4fdc3e45706853ed0"
+      url "https://github.com/alvaldes/velo/releases/download/v1.1.0/velo-v1.1.0-aarch64-apple-darwin.tar.gz"
+      sha256 "1d8803f1d006dc1ef84f80cd2d4099ccf93d140527de8330e18616dd82516732"
     end
     on_intel do
-      url "https://github.com/alvaldes/velo/releases/download/v1.0.0/velo-v1.0.0-x86_64-apple-darwin.tar.gz"
-      sha256 "d9c8597c4e8ef3a5a5ebcd8a85b30d22199db53369a15c81c87c2e53ea9388a0"
+      url "https://github.com/alvaldes/velo/releases/download/v1.1.0/velo-v1.1.0-x86_64-apple-darwin.tar.gz"
+      sha256 "02d267f540350ccf3e1fe26db193f6422cd99290d051afe4512f2b3f6d92a636"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/alvaldes/velo/releases/download/v1.0.0/velo-v1.0.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "3532bffbb579ec29381501b42d25dbde2d895d4a0a2cdad8fc8244fc83380853"
+      url "https://github.com/alvaldes/velo/releases/download/v1.1.0/velo-v1.1.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "45401fe343a586d3108545cd5531a67941eedb54d635899eec57a2cbfe34567b"
     end
     on_intel do
-      url "https://github.com/alvaldes/velo/releases/download/v1.0.0/velo-v1.0.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "078841ae063a41beeabf85707499ecd0e4ba76a3139238d676e34f61086eda3f"
+      url "https://github.com/alvaldes/velo/releases/download/v1.1.0/velo-v1.1.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "bb242c0055c519c75db37b38b4da9d7d6aacedff7568a926b5d10a861cd20284"
     end
   end
 
